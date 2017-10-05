@@ -19,7 +19,15 @@ package 'emacs' do
   action :install
 end
 
-file '/etc/modt' do 
-  content 'This is chnaged from setupCookBook.rb while learning chef'
-  action :create
+#node['ipaddress']
+#node['memeory']['total']
+#node ['hostname']
+
+#print statement 'I have 4 apples'
+apple_count=4
+puts "I have #{apple_count} apples"
+
+template '/etc/motd' do 
+ source 'motd.erb'
+ action :create
 end 
