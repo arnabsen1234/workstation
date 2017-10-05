@@ -15,6 +15,10 @@ package 'ntp' do
   action :install
 end
 
+package 'emac' do
+  action :install
+end
+
 file '/etc/modt' do 
   content 'This is chnaged from setupCookBook.rb while learning chef'
   action :create
